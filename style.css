@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(120deg, rgb(221, 185, 41),rgb(252, 193, 45));
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    font-size: 1.5rem;
+    }
+    header,form{
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    form input, form button{
+        padding: 0.5rem;
+        font-size: 2rem;
+        border: none;
+        background: white;
+
+    }
+    form button{
+        background: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: rgb(223, 158, 37);
+    
+    }
+    form button:hover{
+        background: rgb(230, 75, 19);
+        color: white;
+    }
+     
+    .todo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .todo-list{
+        min-width: 30%;
+        list-style: none;
+        }
+       .todo{
+           margin: 0.5rem;
+           /* padding-left: 2px; */
+           background: white;
+           color: black;
+           font-size: 1.5rem;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           transition: all 0.5s ease;
+       } 
+       .todo li{
+           flex: 1;
+       }
+       .trash-btn, .complete-btn{
+           background: rgb(255, 102, 0);
+           color: white;
+           border: none;
+           padding: 1rem;
+           cursor: pointer;
+           font-size: 1rem;
+
+       }
+       .complete-btn{
+           background: green;
+           
+       }
+       .todo-item{
+           padding: 0rem, 0.5rem;
+       }
+       .fa-trash , .fa-check {
+           pointer-events: none;
+       }
+       .completed{
+           text-decoration:line-through ;
+           opacity:0.5 ;
+       }
+       .fall{
+           transform: translateY(8rem) rotate(20deg);
+           opacity: 0;
+       }
+       select{
+           -webkit-appearance: none;
+           -moz-appearance: none;
+           appearance: none;
+           outline: none;
+           border: none;
+       }
+       .select{
+           margin: 1rem;
+           position: relative;
+           overflow: hidden;
+        }
+        select{
+            color: rgb(28, 99, 36);
+            width:10rem;
+            cursor: pointer;
+            padding: 1rem;
+        }
+        .select::after{
+            content:"\25BC";
+            position:absolute;
+            background: orangered;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+
+        }
+        .select:hover::after{
+            background: white;
+            color: orangered;
+        }
+
